@@ -1,34 +1,16 @@
-import java.io.*;
+import java.io.FileWriter;
 import java.io.IOException;
 class SampleCreate
 {
 	public static void main(String[] args)throws IOException
-{
-	String str="this is just some sample content for writing into a file";
-	FileWriter f=new FileWriter("E:sampleoutput.txt");
-	for(int i=0;i<str.length();i++)
 	{
-     f.write(str.charAt(i));
+	String st="this is just some sample content"+" for writing into a file";
+	FileWriter f=new FileWriter("E:SampleOutputWriter.txt");
+	for(int i=0;i<st.length();i++)
+	{
+	 f.write(st.charAt(i));
 	}
-	f.write("\n");
-	char[] arr={'a','b','c','d','e','f','g','h','i'};
-	f.write(arr);
-	f.write("\n");
-
-	f.write(arr,1,5);
-	f.write("\n");
-
-	f.write("Hello!! good morning");
-	f.write("\n");
-
-	f.write(str,6,14);
-	f.write("\n");
-
-	f.flush();
-	f.write("THE END OF THE FILE..");
-	f.append("thank you");
-	System.out.println("finished writing");
+	System.out.println("Finished writing");
 	f.close();
-
-}
+	}
 }

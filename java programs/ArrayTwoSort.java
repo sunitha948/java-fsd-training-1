@@ -27,7 +27,7 @@ class ArrayTwoSort
 	{
 	for (int j=0;j<size;j++)
 	{
-	if(arr1[i]==arr2[j])
+	if(arr[i]==arr2[j])
 	{
 	arr3.add(arr1[i]);
 	break;
