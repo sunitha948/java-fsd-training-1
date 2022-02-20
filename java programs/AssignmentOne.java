@@ -1,21 +1,32 @@
-import java.util.*;
-class AssignmentOne
-{
-	public static void main(String[] args)
-	{
-	Scanner sc=new Scanner(System.in);
-	System.out.print("Enter the size of the array:");
-	int size=sc.nextInt();
-	int[] arr=new int[size];
-	System.out.print("Enter the array elements:");
-	for(int i=0;i<size;i++)
-	{
-	arr[i]=sc.nextInt();
-	}
-	System.out.print("The array elements are:");
-	for(int i=0;i<size;i++)
-	{
-	System.out.print(arr[i]+",");
-	}
-	}
+import java.lang.*;
+class AssignmentOne {
+         public static void main(String[] args)
+         {
+        	 try
+        	 {
+        		 try
+        		 {
+        	         String abc=null;
+        	         System.out.println(abc.length());
+        	     }
+        	     catch(NullPointerException e)
+        	     {
+        		     System.out.println("Null Pointer Exception");
+        	     }
+        		 catch(NumberFormatException e)
+        		 {
+        			 System.out.println("Number Format Exception");
+                }
+    
+int a=Integer.parseInt("");
+             }
+            catch(NumberFormatException e)
+                 {
+                 System.out.println("Number Format Exception");
+                 }
+             catch(NullPointerException e)
+             {
+                 System.out.println("Null Pointer Exception");
+             }
+         }
 }
