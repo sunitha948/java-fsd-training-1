@@ -1,73 +1,34 @@
+/*Write a program to take input of a String and convert it into a character array and reverse the array,
+and to again make that reversed character array as a String and display it.*/
+import java.io.*;
 import java.util.*;
 class AssignmentThree
 {
-	public static void main(String[] args)
-	{
-	System.out.println("Enter the array size:");
-	Scanner sc=new Scanner(System.in);
-	int size=sc.nextInt();
-	System.out.println("Enter the array 1 elements:");
-	int[] arr1=new int[size];
-	for(int i=0;i<size;i++)
-	{
-	arr1[i]=sc.nextInt();
-	}
-	System.out.println("Enter the elements of array 2");
-	int[] arr2=new int[size];
-	for(int i=0;i<size;i++)
-	{
-	arr2[i]=sc.nextInt();
-
-	}
-	System.out.println("Dissimilar elements:");
-	ArrayList<Integer>arr3=new ArrayList<Integer>();
-	int flag=0;
-	for(int i=0;i<size;i++)
-	{
-	for(int j=0;j<size;j++)
-	{
-	if(arr1[i]==arr2[j])
-	flag=1;
-	}
-	if(flag==0)
-	{
-	arr3.add(arr1[i]);
-	}
-	flag=0;
-	}
-	for(int i=0;i<size;i++)
-	{
-	for(int j=0;j<size;j++)
-	{
-	if(arr2[i]==arr1[j])
-	flag=1;
-	}
-	if(flag==0)
-	{
-	arr3.add(arr2[i]);
-	}
-	flag=0;
-	}
-	System.out.println(arr3);
-	int len=arr3.size();
-	Integer[] arr4=new Integer[len];
-	arr4=arr3.toArray(arr4);
-	for(int i=0;i<len;i++)
-	{
-	for(int j=0;j<len-1;j++)
-	{
-	if(arr4[j+1]>arr4[j])
-	{
-	int temp=arr4[j+1];
-	arr4[j+1]=arr4[j];
-	arr4[j]=temp;
-	}
-	}
-	}
-	System.out.println("after bubble sort is:");
-	for(int i=0;i<len;i++)
-	{
-	System.out.println(arr4[i]);
-	}
-	}
+  public static void main(String[] args)
+  {
+    int i,j;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the String");
+    String s1 = sc.next();
+    char[] arr = s1.toCharArray();
+    char[] arr2 = new char[arr.length];
+    j=arr.length-1;
+    for(i=0;i<arr.length;i++)
+      {
+      arr2[i]=arr[j];
+      j--;
+      }
+    System.out.println("The elements in Reversed string array are: ");
+    for(i=0;i<arr2.length;i++)
+    {
+      System.out.print(arr2[i]+" ");
+    }  System.out.println();
+    StringBuilder s = new StringBuilder();
+    for (i = 0; i < arr2.length; i++)
+    {
+      s.append(arr2[i]);
+    }
+    String reversed = s.toString();
+    System.out.println("The reversed array in string format is "+reversed);
+  }
 }

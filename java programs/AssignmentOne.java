@@ -1,32 +1,22 @@
-import java.lang.*;
-class AssignmentOne {
-         public static void main(String[] args)
-         {
-        	 try
-        	 {
-        		 try
-        		 {
-        	         String abc=null;
-        	         System.out.println(abc.length());
-        	     }
-        	     catch(NullPointerException e)
-        	     {
-        		     System.out.println("Null Pointer Exception");
-        	     }
-        		 catch(NumberFormatException e)
-        		 {
-        			 System.out.println("Number Format Exception");
-                }
-    
-int a=Integer.parseInt("");
-             }
-            catch(NumberFormatException e)
-                 {
-                 System.out.println("Number Format Exception");
-                 }
-             catch(NullPointerException e)
-             {
-                 System.out.println("Null Pointer Exception");
-             }
-         }
+import java.util.*;
+class AssignmentOne
+{
+	public static void main(String[] args)
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the string:");
+	String str1=sc.nextLine();
+	System.out.print("Enter the second string:");
+	String str2=sc.nextLine();
+	boolean result=(str1.contains(str2));
+	if(result==true)
+	{
+	System.out.print("second string is a substring");
+	}
+	else
+	{
+	System.out.println("Second string is not substring");
+	}
+	
+	}
 }
