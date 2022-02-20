@@ -1,34 +1,27 @@
+//create two arraylist of strings to take Fisrt_name and Last_name of the students,and print their whole name.
 import java.util.*;
 class QuestionThree
 {
-	String str;
-	UserDefined(String str)
-	{
-	this.str=str;
-	}
-	public String toString()
-	{
-	return str;
-	}
-}
-public class Pgm3
-{
 	public static void main(String[] args)
 	{
-	Scanner sc=new Scanner(System.in);
-	System.out.println("Enter the number:");
-	int a=s.nextInt();
-	try
+	ArrayList<String> First_name=new ArrayList<String>();
+	ArrayList<String> Last_name=new ArrayList<String>();
+	ArrayList<String> Full_name=new ArrayList<String>();
+	First_name.add("Freya");
+	First_name.add("Anjuna");
+	First_name.add("Athulya");
+	Last_name.add("George");
+	Last_name.add("Babu");
+	Last_name.add("P");
+	for(int i=0;i<First_name.size();i++)
 	{
-	if(a<0)
-	{
-	throw new UserDefined("invalid number");
+	Full_name.add(First_name.get(i)+" "+Last_name.get(i));
 	}
-	System.out.println("Number accepted");
-	}
-	catch(UserDefined e)
+	System.out.println("Full_name:");
+	System.out.println();
+	for(String i:Full_name)
 	{
-	System.out.println(e);
+	System.out.println(i);
 	}
 	}
 }
